@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Atlanta Map</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:100,300" rel="stylesheet">
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+	<!--  Outer Container       -->
+<div class=container>
+
+
+	<!--  HEADER       -->
+	<div class="header">
+				<h2>Atlanta, Georgia</h2>
+		<div id="toggle">
+  			<div class="one"></div>
+  			<div class="two"></div>
+  			<div class="three"></div>
+		</div>
+	</div>
+
+
+
+	<!--  Nav Bar with Locations       -->
+	<div id="locations">
+<!--  Data Bind in View STARTS HERE       -->
+<!--          Data Bind in View STARTS HERE       -->
+<!--                    Data Bind in View STARTS HERE       -->
+<!--    set up an INPUT box with a Knockout data-bind with value=searchedLocation      -->
+		<input id="search-bar" type="search" placeholder="Search..." data-bind="value: searchedLocation, valueUpdate: 'afterkeydown'" autocomplete="off">
+					<!--    This is a horizontal rule     -->
+		<hr style="color: white; width: 84%; top:-15px; position: relative; margin: auto;">
+					<!--     Tset up a list populated with a Knockout data-bind with foreach:filtered      -->
+		<ul class="displayList" data-bind="foreach: filtered">
+					<!--      set up an anchor populated with a Knockout data-bind with text:title      -->
+			<a href="#" class="locations" data-bind="text: title">test</a>
+		</ul>
+
+<!--  Data Bind in View ENDS HERE       -->
+<!--           Data Bind in View ENDS HERE       -->
+<!--                   Data Bind in View ENDS HERE       -->
+	</div>
+
+
+	<!--  Underlying Div with the Map       -->
+	<div id="map"></div>
+
+	<!--  Bottom div with the Footer       -->
+	<div class="footer">
+		<h5>   David Rohm 2018 </h5>
+		<h5>This document uses Foursquare and GoogleMaps API</h5>
+	</div>
+</div>
+<script src="js/knockout-3.4.2.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src=js/locations.js></script>
+<script src=js/app.js></script>
+<script defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7gl0K6FOt5yJ1osqlRABYpldcqrhfmFs&callback=runApp"></script>
+</body>
+
+<!--  BODY ENDS HERE       -->
+</html>
